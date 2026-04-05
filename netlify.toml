@@ -1,0 +1,9 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/proxy/request"
+  to = "/.netlify/functions/proxy-request"
+  status = 200
+  force = true
