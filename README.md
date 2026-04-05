@@ -4,8 +4,10 @@
 
 ## 路由
 
-- `GET /proxy/request`
-- `POST /proxy/request`
+- `GET|POST|PUT|PATCH|DELETE|OPTIONS|HEAD /api/parse`
+- `GET|HEAD /api/proxy-image`
+- `GET|HEAD /api/image-proxy`
+- `GET|POST /proxy/request`
 
 返回结构与原接口保持一致：
 
@@ -49,6 +51,9 @@ curl 'http://localhost:8888/proxy/request?url=https%3A%2F%2Fhttpbin.org%2Fanythi
 ```
 
 ## 环境变量
+
+- `API_BASE_URL`
+  必填于生产环境。`/api/parse` 会把请求转发到 `${API_BASE_URL}/api/parse`。
 
 - `API_SECRET_KEY`
   如果设置了这个值，请求时必须携带 `x-api-key` 或 `Authorization: Bearer <key>`。

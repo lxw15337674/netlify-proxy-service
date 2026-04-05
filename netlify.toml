@@ -7,3 +7,21 @@
   to = "/.netlify/functions/proxy-request"
   status = 200
   force = true
+
+[[redirects]]
+  from = "/api/parse"
+  to = "/.netlify/functions/api-parse"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/proxy-image"
+  to = "/.netlify/functions/api-proxy-image"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/image-proxy"
+  to = "/.netlify/functions/api-image-proxy"
+  status = 200
+  force = true
